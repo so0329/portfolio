@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+    </head>
+
+    <body>
+        <header id="header">
+                <h1 class="title"><a href="index.html">CLOTHĒRA</a></h1>
+                <nav>
+                    <ul>
+                        <li><a href="index.html">CONCEPT</a></li>
+                        <li><a href="product.html">PRODUCTS</a></li>
+                        <li><a href="contact.html">CONTACT</a></li>
+                    </ul>
+                </nav>
+                <div class="icon">
+                    <a href="#"><img src="image/heart-30mm.svg" alt="カート" class="cart_icon"></a>
+                    <a href="#"><img src="image/1.svg" alt="お気に入り" class="favorite"></a>
+                </div>
+        </header>
+
+        <main>
+
+            <div id="mainvisual">
+                <img src="image/hero_03.png" alt="" class="main_hero">
+                  <!-- <div class="slider-container">
+                        <div class="slideimg"></div>
+                        <div class="slideimg"></div>
+                        <div class="slideimg"></div>
+                        <div class="slideimg"></div>
+                        <div class="slideimg"></div>
+                    </div> -->
+                <h1 class="logo fadein"><img src="image/CLOTHÉRA_logo_07.png" alt="" class="logo_ce"></h1>
+            </div>
+
+            <div id="contact_form">
+                <form action="">
+                    <h2>CONTACT</h2>
+                    <p>
+                        <label for="kind">お問い合わせの種類</label><br>
+                        <select name="kind" id="kind">
+                            <option value="1">製品に関するお問い合わせ</option>
+                            <option value="2">店舗に関するお問い合わせ</option>
+                            <option value="3">その他</option>
+                        </select>
+                    </p>
+                    <p>
+                        <label for="subject">お問い合わせの件名</label><br>
+                        <input type="text" name="subject" placeholder="タイトル" id="subject">
+                    </p>
+                    <p>
+                        <label for="message">お問い合わせ内容</label><br>
+                        <textarea name="message" id="message"></textarea>
+                    </p>
+                    <p class="submit">
+                        <input type="submit" value="送信">
+                    </p>
+                </form>
+            </div>
+
+        </main>
+
+        <div class="footer_menu">
+            <nav>
+                <ul>
+                    <li><a href="#">店舗検索</a></li>
+                    <li><a href="#">会員サービス</a></li>
+                    <li><a href="#">お問い合わせ</a></li>
+                    <li><a href="#">お客様対応方針</a></li>
+                    <li><a href="#">ギフトカード</a></li>
+                    <li><a href="#">企業サイト</a></li>
+                    <li><a href="#">採用情報</a></li>
+                </ul>
+            </nav>
+        </div>
+
+        <footer>
+            <p class="copyright">&copy; CLOTHÉRA</p>
+        </footer>
+    </body>
+</html>

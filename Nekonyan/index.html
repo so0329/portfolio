@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>ようこそ</title>
+  <link rel="icon" href="./images/favicon.ico" />
+  <style>
+    body {
+      margin: 0;
+      background-color: #DEAFA2;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+    }
+
+    .circle-wrapper {
+      width: 300px;
+      height: 300px;
+      background-color: white;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      box-shadow: 0 0 20px rgba(0,0,0,0.3);
+    }
+
+    .welcome-gif {
+      width: 200px; /* GIFの表示サイズ */
+      height: auto;
+    }
+  </style>
+</head>
+<body onclick="location.href='index1.html'">
+  <div class="circle-wrapper">
+    <img src="images/neko.gif" alt="ようこそ" class="welcome-gif">
+  </div>
+</body>
+</html>

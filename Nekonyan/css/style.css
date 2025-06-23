@@ -1,0 +1,433 @@
+@charset "UTF-8";
+
+/* ══════════════════════════════ */
+/* 基本リセット & 全体設定 */
+/* ══════════════════════════════ */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+html {
+  font-size: 16px;
+  font-family: serif;
+}
+body {
+  margin: 0;
+  font-family:"ヒラギノ丸ゴ Pro W4","ヒラギノ丸ゴ Pro","Hiragino Maru Gothic Pro","ヒラギノ角ゴ Pro W3","Hiragino Kaku Gothic Pro","HG丸ｺﾞｼｯｸM-PRO","HGMaruGothicMPRO";
+  background-image: url(../images/haikei.png);
+  color: #333;
+}
+img {
+  max-width: 100%;
+  height: auto;
+}
+p, li, th, td {
+  color: #5A5A5A;
+  line-height: 1.7;
+  text-align: center;
+}
+
+/* リンク共通 */
+a {
+  font-weight: bold;
+  color: #FFF;
+  text-decoration: none;
+}
+a:hover,
+a:active {
+  text-decoration: underline;
+}
+
+/* ══════════════════════════════ */
+/* ヘッダー・ナビゲーション */
+/* ══════════════════════════════ */
+.nav {
+  background-color: #DEAFA2;
+}
+.nav ul {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.nav li a {
+  font-size: 1.3rem;
+}
+
+/* ══════════════════════════════ */
+/* ヒーローエリア */
+/* ══════════════════════════════ */
+.hero-logo {
+  position: absolute;
+  top: 100px;         /* 上からの距離 */
+  left: 100px;        /* 左からの距離 */
+  width: 500px;      /* ロゴの大きさは調整可 */
+  height: 500px;
+  z-index: 10;       /* ヒーロー画像の上に表示させるため */
+  animation: fadeInLogo 2s ease-in forwards;
+}
+@keyframes fadeInLogo {
+  from {
+    opacity: 0;
+    transform: translateY(-20px); /* 少し上から */
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.hero {
+  margin: 0 auto;
+  text-align: center;
+  position: relative;
+  width: 100%;
+}
+.hero.index {
+  padding: 350px 0;
+  background: url("../images/ヒーロー\ 1.png") center no-repeat;
+  background-size: cover; 
+  background-position: center center;
+}
+.hero.contact {
+  padding: 350px 0;
+  background: url("../images/カフェ/cafe\ \(2\).jpg") center no-repeat;
+  background-size: cover; 
+  background-position: center center;
+}
+.hero-text {
+  color: #000;
+  text-shadow: 1px 2px 10px #808080;
+  font-size: 2rem;
+}
+
+/* ══════════════════════════════ */
+/* メインコンテンツ共通スタイル */
+/* ══════════════════════════════ */
+main {
+  max-width: 1000px;
+  margin: 90px auto;
+  padding: 0 1rem;
+}
+#access img{
+  width: 50%;
+  height: 300px;
+  object-fit: contain;
+  border-radius: 10px;
+}
+.items {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 20px;
+}
+.items img {
+  width: 300px;
+  height: 300px;
+  object-fit: contain;
+  border-radius: 10px;
+  text-align: center;
+}
+#neko img {
+  width: 300px;
+  height: 300px;
+  object-fit: contain;
+  border-radius: 10px;
+  text-align: center;
+}
+#foods img {
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.headline {
+  font-size: 3rem;
+  color: #D5B48C;
+  text-align: center;
+}
+main h2 {
+  font-size: 1.5rem;
+  color: #535353;
+  margin: 60px 0 20px;
+  padding-bottom: 5px;
+  border-bottom: 1.5px solid #FFF;
+  text-align: center;
+}
+h3 {
+  color: #535353;
+  text-align: center;
+}
+.box {
+  background-color: hsl(313, 100%, 93%);
+  border-radius: 10px;
+  padding: 2rem;
+}
+.row {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  margin: 40px 0;
+}
+.row img {
+  width: 50%;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+#neko img{
+  width: 50%;
+  height: 300px;
+  object-fit: contain;
+  border-radius: 10px;
+}
+.row-text {
+  width: 50%;
+  background-color: #FFF;
+  border-radius: 10px;
+  padding: 2rem;
+  height: 300px;
+}
+.row-text p {
+  text-align: left;
+  
+}
+.h3 {
+  font-weight: bold;
+}
+#access img {
+    width: 50%;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+/* 逆順レイアウト用 */
+.reverse {
+  flex-direction: row-reverse;
+}
+
+/* ニュースリスト */
+.news {
+  background-color: #FFF;
+  border-radius: 10px;
+  padding: 2rem;
+}
+.news li {
+  text-align: left;
+}
+
+
+
+
+
+
+
+.cat-card {
+  text-align: center;
+  margin-top: 2rem;
+  background-color: fff;
+}
+
+.cat-card img {
+  width: 1000px !important; /* 必要に応じて調整可 */
+  height: auto!important;
+  border-radius: 16px!important;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1)!important;
+}
+
+.cat-card h3 {
+  margin-top: 1rem;
+  font-size: 1.5rem;
+}
+
+.cat-card p {
+  margin-top: 0.5rem;
+  font-size: 1rem;
+  color: #444;
+}
+
+
+
+
+
+/* チケットボタン */
+
+.ticket-mark {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 120px;
+  height: 120px;
+  background-color: #ffd966;
+  color: #5c4033;
+  font-size: 3rem;           /* アイコンの大きさ */
+  border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+  cursor: pointer;
+  text-decoration: none;
+  z-index: 1000;
+  padding: 10px;
+  transition: background-color 0.3s ease;
+  overflow: hidden;          /* はみ出し防止 */
+  text-align: center;
+}
+
+.ticket-mark:hover {
+  background-color: #e6c550;
+}
+
+.ticket-text {
+  font-size: 0.9rem;          /* 文字サイズを少し小さく */
+  margin-top: 6px;
+  font-weight: bold;
+  color: #5c4033;
+  user-select: none;
+  line-height: 1.2;
+  max-width: 90%;             /* 横幅制限 */
+  word-wrap: break-word;      /* 折り返し許可 */
+}
+
+/* ショップ情報テーブル */
+.shop-info {
+  border-collapse: collapse;
+  margin: 1rem auto;
+}
+.shop-info th,
+.shop-info td {
+  border: 3px solid #DEAFA2;
+  padding: 20px;
+  border-radius: 10px;
+}
+.shop-info th {
+  width: 333px;
+  background-color: #F6E9D7;
+}
+.shop-info td {
+  background-color: #FFF;
+}
+
+/* お問い合わせエリア */
+#contact {
+  background-color: #FFF;
+  border-radius: 10px;
+  padding: 1rem;
+  width: 90%;
+  margin: auto;
+  text-align: center;
+}
+
+/* フッター */
+footer {
+  background-color: #DEAFA2;
+  padding: 20px 0;
+  text-align: center;
+  font-size: 14px;
+  color: #333;
+  margin-top: 50px;
+}
+
+.footer-content {
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.footer-links {
+  list-style: none;
+  padding: 0;
+  margin: 10px 0 0;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.footer-links li a {
+  color: #555;
+  text-decoration: none;
+}
+
+.footer-links li a:hover {
+  text-decoration: underline;
+}
+
+/* ══════════════════════════════ */
+/* アニメーション（ウォーカー） */
+/* ══════════════════════════════ */
+.demo_stage {
+  width: 300px;   /* gifサイズに合わせる */
+  height: 300px;
+  margin: 20px auto;  /* 中央寄せ（左右）*/
+  position: relative;
+  background: white;  /* 白丸背景 */
+  border-radius: 50%;
+  box-shadow: 0 0 8px rgba(0,0,0,0.3); /* 影 */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.demo_wrap {
+  position: static;  /* 絶対位置はやめる */
+  animation: none;
+}
+
+.demo_item {
+  width: 200px;
+  height: 200px;
+  background: url("../images/neko.gif") no-repeat center;
+  background-size: contain;
+  transform: none;
+  transition: none;
+}
+
+
+/* ══════════════════════════════ */
+/* レスポンシブ対応 */
+/* ══════════════════════════════ */
+@media screen and (max-width: 768px) {
+  html {
+    font-size: 14px;
+  }
+  .nav ul {
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  .hero.index {
+    padding: 180px 0;
+  }
+  .hero-text {
+    position: absolute;
+    top: 50%;
+    left: 60%;
+    transform: translate(-40%, -50%);
+    width: 100%;
+    font-size: 1.5rem;
+    padding: 0 1rem;
+  }
+  .row {
+    flex-direction: column;
+    gap: 20px;
+  }
+  .row-text {
+    width: 100%;
+    text-align: center;
+    order: 1;
+  }
+  .row img {
+    width: 100%;
+    order: 0;
+  }
+  main {
+    margin: 40px auto;
+  }
+  footer .copyright {
+    padding: 40px 0;
+  }
+}

@@ -1,0 +1,288 @@
+@charset "UTF-8";
+
+html {
+    font-size: 16px;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: rgb(0, 0, 0);
+}
+
+img {
+    max-width: 100%;
+}
+
+/* 下記仮 */
+
+.anim-box.slidein.is-animated.one {
+    color: white;
+    animation: slideIn 2s cubic-bezier(0.25, 1, 0.5, 1) forwards;
+
+    font-family: "Shippori Mincho", serif;
+    font-weight: 400;
+    font-style: normal;
+    width: 1000px;
+    font-size: 3rem;
+    color: white;
+    position: absolute;
+    top:28%;
+    left:55%;
+    transform: translate(-50%,-50%);
+    padding:0;
+    margin:0;
+}
+
+.anim-box.slidein.is-animated.two {
+    color: white;
+    animation: slideIn 2.5s cubic-bezier(0.25, 1, 0.5, 1) forwards;
+
+    font-family: "Shippori Mincho", serif;
+    font-weight: 400;
+    font-style: normal;
+    width: 1000px;
+    font-size: 5rem;
+    color: white;
+    position: absolute;
+    top:34%;
+    left:55%;
+    transform: translate(-50%,-50%);
+    padding:0;
+    margin:0;
+    text-shadow: 1px 1px 2px black;
+}
+
+.anim-box.slidein.is-animated.sub_one {
+    color: white;
+    animation: slideIn 2.5s cubic-bezier(0.25, 1, 0.5, 1) forwards;
+
+    font-family: "Shippori Mincho", serif;
+    font-weight: 400;
+    font-style: normal;
+    width: 1000px;
+    font-size: 2rem;
+    color: white;
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    padding:0;
+    margin:0;
+    text-shadow: 1px 1px 2px black;
+}
+
+.SDGs_text{
+    font-family: "Shippori Mincho", serif;
+    font-weight: 400;
+    font-style: normal;
+    width: 1000px;
+    font-size: 4rem;
+    color: white;
+    position: absolute;
+    top:160%;
+    left:10%;
+    text-shadow: 1px 1px 3px black;
+}
+   
+.SDGs_text2{
+    font-family: "Shippori Mincho", serif;
+    font-weight: 400;
+    font-style: normal;
+    width: 1000px;
+    font-size: 2rem;
+    color: white;
+    position: absolute;
+    top:200%;
+    left:30%;
+    text-shadow: 1px 1px 2px black;
+}
+   
+  @keyframes slideIn {
+    0% {
+      transform: translateX(180px);
+      opacity: 0;
+    }
+    100% {
+      transform: translateX(0);
+    }
+    40%,100% {
+      opacity: 1;
+    }
+}
+
+
+.title {
+    position: relative;
+}
+
+.SDGs {
+    margin-top: 100px;
+    color: white;
+}
+
+h1 {
+    font-size: 3rem;
+}
+
+.point_img {
+    width: 80px;
+    height: auto;
+    margin-left: 200px
+}
+
+.section_text {
+    border-bottom: solid gray 3px;
+}
+
+.point {
+    width: 330px;
+    height: 220px;
+    object-fit: cover;
+    margin-left: 400px;
+
+}
+
+.points {
+    display: grid;
+    grid-template-columns: 35% 65%;
+    align-items: flex-start;
+    justify-content: center;
+    margin-bottom: 10px;
+    
+}
+
+.point_title {
+    margin:10px;
+}
+
+p {
+    color: white;
+    text-align: center;
+}
+
+
+h2 {
+    color: white;
+    text-align: center;
+    margin: 100px;
+    font-size: 2.5rem;
+}
+
+h3 {
+    font-size: 1.3rem;
+    padding-bottom: 20px;
+}
+
+.section_voice {
+    margin-left: 60px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 5px;
+}
+
+.users {
+    width: 330px;
+    height: auto;
+    object-fit: cover;
+    margin-top: 10px;
+}
+
+.voices {
+    color: white;
+    background-color: gray;
+    border-radius: 30px;
+    width: 450px;
+    padding: 30px;
+    margin: 5px;
+    text-align: center;
+}
+
+.voices p {
+    padding: 10px;
+    padding-left: 0;
+    margin-top: 10px;
+    margin-left: 0;
+    width: 415px;
+}
+
+.point_text {
+    margin: 0;
+}
+
+.Product {
+    width: 700px;
+    height: auto;
+    object-fit: cover;
+    margin-left: 20%;
+}
+
+.pencil {
+    display: grid;
+    grid-template-columns: 35% 65%;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+
+.Product_text {
+    margin-left: 200px;
+    font-size: 1.4rem;
+}
+
+table {
+    margin: auto;
+    width: 1000px;
+}
+
+.contact {
+    border-collapse: collapse;
+    background-color: gray;
+}
+
+.conpany {
+    margin: auto;
+    border-collapse: collapse;
+    background-color: gray;
+    width: 1000px;
+}
+
+.conpany th {
+    text-align: left;
+    vertical-align: center;
+}
+
+.contact th,.conpany th {
+    border: 1px solid #DBDBDB;
+    padding: 20px;
+    color: white;
+    width: 30%;
+}
+
+.contact td,.conpany td {
+    border: 1px solid #DBDBDB;
+    padding: 20px;
+    color: white;
+    width: 70%;
+}
+
+.contact th {
+    text-align: left;
+    vertical-align: center;
+}
+
+input[type="submit"] {
+    padding: 10px;
+    width: 220px;
+    background-color: white;
+    color: black;
+}
+
+.submit {
+    margin-top: 30px;
+    text-align: center;
+}

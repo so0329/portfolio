@@ -1,0 +1,362 @@
+@charset "utf-8";
+
+/* 全体に適用 */
+html {
+    font-size: 16px;
+    scroll-behavior: smooth;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+main {
+    padding-top: 50px;
+}
+
+body {
+    background-color: white;
+    font-family: "Playfair Display", serif;
+    font-optical-sizing: auto;
+    font-weight: <weight>;
+    font-style: normal;
+}
+
+a {
+    text-decoration: none;
+    color: #d4af37;
+}
+
+ul {
+    list-style: none;
+}
+
+img {
+    max-width: 100%;
+}
+
+/* アニメーション */
+
+/*
+.slider-container {
+    position: relative;
+    width: 100%;
+    height: 900px;
+    overflow: hidden;
+}
+
+
+.slideimg {
+    position: absolute; 
+    inset: 0; 
+    opacity: 0; 
+    background-size: cover; 
+    animation: slideAnime 12s infinite; 
+}
+
+
+.slideimg:nth-of-type(1) {
+    background-image: url(../image/1920×1080⑭.png); animation-delay: 0s;
+}
+.slideimg:nth-of-type(2) {
+    background-image: url(../image/whonity_image2.png); animation-delay: 6s;
+}
+
+
+@keyframes slideAnime {
+    0%, 30%, 100% { opacity: 0; } 
+    10%, 20% { opacity: 1; } 
+}
+
+*/
+
+.fadein {
+    animation-name: fadein_anime;
+    animation-fill-mode: both;
+    animation-duration: 3s;
+    animation-iteration-count: 1;
+    animation-timing-function: ease;
+    animation-delay: 0.5s;
+    animation-direction: normal;
+}
+
+@keyframes fadein_anime {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+/* ヘッダー */
+#header {
+    background-color: #1f3a63;
+    width: 100%;
+    display: flex;
+    position: fixed;
+    justify-content: space-around;
+    align-items: center;
+    height: 60px;
+    z-index: 1;
+}
+
+.title {
+    margin-right: 650px;
+}
+
+#header ul {
+    display: flex;
+    gap: 200px;
+}
+
+#header li {
+    font-size: 0.9rem;
+}
+
+/* メインビジュアル */
+h1 {
+    color: #d4af37;
+}
+
+h2 {
+    border-bottom: 1px solid #d4af37;
+}
+
+.main_hero {
+    height: 900px;
+    width: 100%;
+    object-fit: cover;
+    object-position: 90% 10%;
+
+}
+
+.mainvisual {
+    position: relative;
+}
+
+.logo {
+    position: absolute;
+    font-size: 3rem;
+    transform: translateY(-50%) translateX(-50%);
+    top: 40%;
+    left: 20%;
+}
+
+.logo_ce {
+    width: 40%;
+}
+
+
+/* 全項目名 */
+.section {
+    text-align: center;
+    color: #2e2e2e;
+    font-size: 2.5rem;
+    
+    margin: 100px 0 3em 0;
+}
+
+/* コンセプト */
+#concept {
+}
+
+#concept p {
+    font-family: "Noto Sans JP", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: <weight>;
+    font-style: normal;
+    font-size: 1rem;
+    margin: 100px;
+}
+
+.aori {
+    font-family: "Noto Sans JP", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: <weight>;
+    font-style: normal;
+    font-size: 2.5rem;
+}
+
+/* 商品一覧・トレンド */
+#products {
+
+}
+
+.products{
+    object-fit: cover;
+    width: 100%;
+    height: 600px;
+}
+
+.products_images a{
+    color: white;
+}
+
+.goproducts:hover {
+    opacity: 0.7;
+}
+
+.products_image1 {
+    position: relative;
+}
+
+.image1_title {
+    color: white;
+    position: absolute;
+    font-size: 3rem;
+    transform: translateY(-50%) translateX(-50%);
+    top: 70%;
+    left: 20%;
+}
+
+.image1_text {
+    color: white;
+    position: absolute;
+    font-size: 1rem;
+    transform: translateY(-50%) translateX(-50%);
+    top: 83%;
+    left: 20%;
+}
+
+.products_image2 {
+    position: relative;
+}
+
+.image2_title {
+    color: white;
+    position: absolute;
+    font-size: 3rem;
+    transform: translateY(-50%) translateX(-50%);
+    top: 70%;
+    left: 20%;
+}
+
+.image2_text {
+    color: white;
+    position: absolute;
+    font-size: 1rem;
+    transform: translateY(-50%) translateX(-50%);
+    top: 83%;
+    left: 20%;
+}
+
+.products_image3 {
+    position: relative;
+}
+
+.image3_title {
+    color: white;
+    position: absolute;
+    font-size: 3rem;
+    transform: translateY(-50%) translateX(-50%);
+    top: 70%;
+    left: 20%;
+}
+
+.image3_text {
+    color: white;
+    position: absolute;
+    font-size: 1rem;
+    transform: translateY(-50%) translateX(-50%);
+    top: 83%;
+    left: 20%;
+}
+
+.underline03 {
+    color: #d4af37;
+    background: linear-gradient(transparent 80%, #d4af37 10%);
+    font-size: 2rem;
+}
+
+.more {
+    margin-right: 12%;
+    text-align: right;
+}
+
+.trend_image {
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-around;
+}
+
+.trend {
+    width: 30%;
+    height: 700px;
+    object-fit: cover;
+}
+
+
+/* お問合せ */
+
+#contact p {
+    font-size: 1.5rem;
+    font-family: "Noto Sans JP", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: <weight>;
+    font-style: normal;
+
+}
+
+
+/* フッター */
+.copyright {
+    margin-top: 20px;
+    margin-bottom: 0;
+    padding-top: 75px;
+    padding-bottom: 75px;
+    background-color: #1f3a63;
+    color: white;
+    text-align: center;
+}
+
+
+/* 2ページ目・商品ページ */
+
+#contact_form h2{
+    text-align: center;
+    font-size: 3rem;
+}
+
+.productpage_images {
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns :1fr 1fr;
+}
+
+.productpage_image {
+    width: 40%;
+    height: 400px;
+    object-fit: cover;
+
+}
+
+/* 2ページ目・問い合わせページ */
+form {
+    margin: 0 auto;
+    max-width: 640px;
+}
+
+input[type="text"],textarea {
+    padding: 6px;
+    width: 100%;
+    font-size: 1rem;
+}
+
+textarea {
+    height: 140px;
+}
+
+.submit {
+    text-align: center;
+}
+
+input[type="submit"] {
+    border: none;
+    padding: 20px;
+    width: 200px;
+    background-color: #253958;
+    color: #FFFFFF;
+    font-size: 1rem;
+}

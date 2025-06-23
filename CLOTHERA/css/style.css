@@ -1,0 +1,603 @@
+@charset "utf-8";
+
+/* 全体に適用 */
+html {
+    font-size: 16px;
+    scroll-behavior: smooth;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+main {
+    padding-top: 50px;
+    margin-top: 0;
+    overflow: hidden;
+}
+
+body {
+    background-color: white;
+    font-family: "Playfair Display", serif;
+    font-optical-sizing: auto;
+    font-weight: <weight>;
+    font-style: normal;
+}
+
+a {
+    text-decoration: none;
+    color: #d4af37;
+}
+
+ul {
+    list-style: none;
+}
+
+img {
+    max-width: 100%;
+}
+
+/* アニメーション */
+
+/*
+.slider-container {
+    position: relative;
+    width: 100%;
+    height: 900px;
+    overflow: hidden;
+}
+
+
+.slideimg {
+    position: absolute; 
+    inset: 0; 
+    opacity: 0; 
+    background-size: cover; 
+    animation: slideAnime 12s infinite; 
+}
+
+
+.slideimg:nth-of-type(1) {
+    background-image: url(../image/1920×1080⑭.png); animation-delay: 0s;
+}
+.slideimg:nth-of-type(2) {
+    background-image: url(../image/whonity_image2.png); animation-delay: 6s;
+}
+
+
+@keyframes slideAnime {
+    0%, 30%, 100% { opacity: 0; } 
+    10%, 20% { opacity: 1; } 
+}
+
+*/
+
+.fadein {
+    animation-name: fadein_anime;
+    animation-fill-mode: both;
+    animation-duration: 3s;
+    animation-iteration-count: 1;
+    animation-timing-function: ease;
+    animation-delay: 0.5s;
+    animation-direction: normal;
+}
+
+@keyframes fadein_anime {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+/* ヘッダー */
+#header {
+    background-color: #1f3a63;
+    width: 100%;
+    display: flex;
+    position: fixed;
+    justify-content: space-between;
+    align-items: center;
+    height: 60px;
+    z-index: 1;
+}
+    .icon {
+        display: flex;
+        gap: 20px;
+    }
+    .icon img {
+        width: 30px;
+    }
+    .favorite {
+        margin-right: 20px;
+    }
+
+.title {
+    margin-left: 20px;
+}
+
+#header ul {
+    display: flex;
+    gap: 100px;
+    margin-right: 100px;
+}
+
+#header li {
+    font-size: 0.9rem;
+}
+
+/* メインビジュアル */
+h1 {
+    color: #d4af37;
+}
+
+.main_hero {
+    height: 700px;
+    width: 100%;
+    object-fit: cover;
+    object-position: 90% 10%;
+}
+
+#mainvisual {
+    position: relative;
+}
+
+.logo {
+    position: absolute;
+    font-size: 3rem;
+    transform: translateY(-50%) translateX(-50%);
+    top: 40%;
+    left: 30%;
+}
+
+.logo_ce {
+    width: 40%;
+}
+
+
+/* 全項目名 */
+.section {
+    text-align: center;
+    color: #2e2e2e;
+    font-size: 2.5rem;
+    
+    margin: 100px 0 3em 0;
+}
+
+.line {
+        background-image: url(../image/goldline2.png);
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: bottom center;
+        background-size: 40vw;
+        height: 100px;
+    }
+
+
+/* コンセプト */
+#concept {
+}
+
+#concept p {
+    font-family: "Noto Sans JP", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: <weight>;
+    font-style: normal;
+    font-size: 1rem;
+    margin: 100px;
+}
+
+.aori {
+    font-family: "Noto Sans JP", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: <weight>;
+    font-style: normal;
+    font-size: 2.5rem;
+    text-align: center;
+    margin-left: 30px;
+}
+
+/* 商品一覧・トレンド */
+
+.img_box {
+    width: 100%;
+    height: 600px;
+    overflow: hidden;
+    position: relative;
+}
+
+.products_images {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    max-width: 100%;
+}
+
+.products_images a{
+    color: white;
+}
+
+.goproducts:hover {
+    opacity: 0.7;
+}
+
+.image1_title {
+    color: white;
+    position: absolute;
+    font-size: 3rem;
+    transform: translateY(-50%) translateX(-50%);
+    top: 70%;
+    left: 30%;
+}
+
+.image1_text {
+    color: white;
+    position: absolute; 
+    font-size: 1rem;
+    transform: translateY(-50%) translateX(-50%);
+    top: 83%;
+    left: 20%;
+}
+
+.image2_title {
+    color: white;
+    position: absolute;
+    font-size: 3rem;
+    transform: translateY(-50%) translateX(-50%);
+    top: 70%;
+    left: 22%;
+}
+
+.image2_text {
+    color: white;
+    position: absolute;
+    font-size: 1rem;
+    transform: translateY(-50%) translateX(-50%);
+    top: 83%;
+    left: 20%;
+}
+
+.image3_title {
+    color: white;
+    position: absolute;
+    font-size: 3rem;
+    transform: translateY(-50%) translateX(-50%);
+    top: 70%;
+    left: 25%;
+}
+
+.image3_text {
+    color: white;
+    position: absolute;
+    font-size: 1rem;
+    transform: translateY(-50%) translateX(-50%);
+    top: 83%;
+    left: 20%;
+}
+
+/* トレンド */
+
+.trend_image {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+}
+
+.trend_image.img_box {
+    width: 600px;
+    height: 700px;
+    overflow: hidden;
+}
+
+.img_box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: 1s all;
+}
+
+.img_box img:hover {
+    transform: scale(1.05);
+    opacity: 0.6;
+    transition: 0.3s all;
+}
+
+.trend_text {
+    width: 100%;
+    height: auto;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    h3{
+        font-size: 1.5rem;
+    }
+}
+
+
+
+
+/* お問合せ */
+#contact h2 {
+        font-size: 2.5rem;
+        margin-bottom: 30px;
+}
+
+#contact p {
+    font-size: 1.3rem;
+    font-family: "Noto Sans JP", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: <weight>;
+    font-style: normal;
+
+}
+
+.contact_btn {
+  background-color: #253958;
+  color: white;
+  padding: 20px 50px;
+  width: fit-content;
+  margin: 0 auto; /* ←中央寄せ */
+  cursor: pointer;
+  border-radius: 6px;
+  text-align: center;
+}
+
+.footer_menu {
+    width: 100%;
+    margin: 0 auto;
+
+    ul{
+        color: #2e2e2e;
+        display: flex;
+        justify-content: space-around;
+        padding-top: 15px;
+        padding-bottom: 15px;
+        border-top: #ccc 1px solid;
+        border-bottom: #ccc 1px solid;
+    }
+
+}
+
+/* フッター */
+.copyright {
+    margin-top: 20px;
+    margin-bottom: 0;
+    padding-top: 75px;
+    padding-bottom: 75px;
+    background-color: #1f3a63;
+    color: white;
+    text-align: center;
+}
+/* 2ページ目・商品ページ */
+
+.productpage_images {
+    max-width: 900px; 
+    height: auto; 
+    margin: 10vh auto 30vh auto; 
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr; 
+    justify-content: space-evenly;
+    gap: 50px;
+    overflow: hidden;
+
+    img {
+    width: calc(500px/2); }
+
+    img:hover {
+        transform: scale(1.05);
+        transition: 0.3s;
+        opacity: 0.6;
+    }
+}
+
+#PRODUCTS {
+    margin: 10vh auto;
+    text-align: center;
+    font-size: 2rem;
+}
+
+
+/* 3ページ目・問い合わせページ */
+form {
+    margin: 0 auto 10vh auto;
+    max-width: 640px;
+
+    h2 {
+        font-size: 3rem;
+        margin: 50px auto;
+        text-align: center;
+    }
+}
+
+input[type="text"],
+textarea,
+select {
+    padding: 6px;
+    width: 100%;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;     
+}
+
+input[type="text"]:focus,
+textarea:focus,
+select:focus {
+    border-color: #1f3a63;
+    outline: none;
+}
+
+select {
+    padding: 6px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+
+    appearance: auto;
+    -webkit-appearance: auto;
+}
+
+textarea {
+    height: 140px;
+}
+
+.submit {
+    text-align: center;
+}
+
+input[type="submit"] {
+    border: none;
+    padding: 20px;
+    width: 200px;
+    background-color: #253958;
+    color: #FFFFFF;
+    font-size: 1rem;
+    margin-top: 30px;
+}
+
+/* レスポンシブ対応*/
+@media screen and (max-width:959px) {
+    /* 480px以下に適用されるCSS(スマホ用) */
+    /* ヘッダー */
+
+    main {
+        padding-top: 30px;
+    }
+
+    #header {
+        height: auto;
+        padding: 10px;
+    }
+
+    #header li {
+        font-size: 0.9rem;
+    }
+
+    #header ul {
+        gap: 10px;
+        margin-right: 0px;
+    }
+
+    .icon {
+        display: flex;
+        gap: 10px;
+
+    }
+
+    .favorite {
+        margin-right: 0;
+    }
+
+    .title {
+        margin-right: 10px;
+        margin-left: 0;
+        font-size: 1.2rem;
+    }
+
+
+
+    /* メイン */
+
+    .aori {
+        font-size: 1.5rem;
+    }
+
+    .section {
+        font-size: 1.5rem;
+    }
+
+    .main_hero {
+        height: 300px;
+        object-position: left;
+    }
+
+    .logo {
+        width: 50%;
+        transform: translateY(-50%) translateX(-50%);
+        top: 50%;
+        left: 40%;
+    }
+
+    .image1_title {
+    font-size: 2rem;
+    transform: translateY(-50%) translateX(-50%);
+    top: 65%;
+    left: 40%;
+    }
+
+    .image1_text {
+    transform: translateY(-50%) translateX(-50%);
+    top: 83%;
+    left: 40%;
+    }
+
+    .image2_title {
+    font-size: 2rem;
+    transform: translateY(-50%) translateX(-50%);
+    top: 65%;
+    left: 40%;
+    }
+
+    .image2_text {
+    font-size: 1rem;
+    transform: translateY(-50%) translateX(-50%);
+    top: 83%;
+    left: 40%;
+    }
+
+    .image3_title {
+    font-size: 2rem;
+    transform: translateY(-50%) translateX(-50%);
+    top: 65%;
+    left: 40%;
+    }
+
+    .image3_text {
+    font-size: 1rem;
+    transform: translateY(-50%) translateX(-50%);
+    top: 83%;
+    left: 40%;
+    }
+
+    .trend_image {
+    max-width: 600px;
+    margin: 0 auto;
+    grid-template-columns: 1fr;
+    gap: 50px;
+    }
+
+    .footer_menu ul{
+    width: 90%;
+    margin: 0 auto;
+    flex-wrap: wrap;
+    gap: 10px;
+    }
+
+    .products_images {
+    display: grid;
+    flex-direction: column;
+    gap: 20px;
+    max-width: 100%;
+    }
+
+    /* 2ページ目 */
+   .productpage_images {
+    max-width: 400px; 
+    height: auto; 
+    margin: 10vh auto 30vh auto; 
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr; 
+    }
+    
+    /* 3ページ目 */
+    form {
+    margin: 0 auto 10vh auto;
+    max-width: 400px;
+}
+
+}

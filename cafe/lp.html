@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="KUZIRA CAFEのランディングページです。" />
+  <link rel="stylesheet" href="css/lp.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho+B1&display=swap" rel="stylesheet">
+
+  <link href="https://fonts.googleapis.com/css2?family=Creepster&display=swap" rel="stylesheet">
+
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Noto+Sans+JP:wght@400;700&display=swap" rel="stylesheet">
+  <title>KUZIRA CAFE</title>
+</head>
+
+<body>
+    <div class="whale-cursor">🐳</div>
+  <header>
+    <div class="container">
+      <p class="logo">KUZIRA CAFE</p>
+      <nav>
+        <ul>
+          <li><a href="#about">Features</a></li>
+          <li><a href="#menu">MENU</a></li>
+          <li><a href="#voice">Guests</a></li>
+           <li><a href="#news">NEWS</a></li>
+          <li><a href="#access">ACCESS</a></li>
+          <li><a href="#contact">INFO</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div class="whale-container"></div>
+   <img src="./images/whale-18312_640.jpg" alt="クジラ" class="swimming-whale">
+ 
+
+  </header>
+
+  <main>
+    <section class="hero">
+      <h1 class="zoom-in">KUZIRA CAFE</h1>
+      <p class="catch slide-in">自然に囲まれたひととき、心安らぐ一杯のコーヒーで。</p>
+    </section>
+
+    <section id="about">
+      <h2>3つの特徴 </h2>
+      <div class="feature">
+        <h3>自然に囲まれたリラクゼーションスペース</h3>
+        <p>太平洋と山々に囲まれたロケーションで、心も体もリフレッシュ。</p>
+        <h3>厳選コーヒーのこだわり</h3>
+        <p>世界中の豆を丁寧にドリップ。特別イベント限定メニューも。</p>
+        <h3>温かいアットホームな雰囲気</h3>
+        <p>スタッフとの温かい会話とともに、ゆったりとした時間を。</p>
+        <a href="index.html" class="btn">ガン見する</a>
+      </div>
+    </section>
+
+    <section id="menu">
+      <h2>おすすめメニュー </h2>
+      <h3>旬のイチゴタルト</h3>
+      <p>春限定！甘酸っぱいイチゴがたっぷりの自家製タルト。</p>
+      <h3>コーヒー飲み比べセット</h3>
+      <p>各国の風味を楽しめる飲み比べ体験。</p>
+      <h3>自家製マロンクリームのシュー</h3>
+      <p>濃厚クリームが絶品。お土産にも◎</p>
+      <a href="menu.html" class="btn">ガン見する</a>
+    </section>
+
+    <section id="voice">
+      <h2>お客様の声 </h2>
+      <p>「自然に囲まれてリフレッシュできました！」 — 山本様</p>
+      <p>「イチゴタルト、最高！また来たいです。」 — 田中様</p>
+      <p>「「飲みほせよ」のキツく優しい言葉にグッときました。」 — カフェイン中毒様</p>
+    </section>
+
+    <section id="news">
+      <h2>TVで紹介されました！</h2>
+     <img src="./images/tv.png" alt="tvv" class="news-img">
+
+      <p class="caption">2025年6月某日、KUZIRA CAFEが朝の情報番組で紹介されました！</p>
+
+      
+    </section>
+
+
+    <section id="access">
+      <h2>アクセス </h2>
+      <h3>お車でのアクセス</h3>
+      <p>駐車場あり、楽々アクセス。</p>
+      <h3>公共交通機関</h3>
+      <p>最寄りバス停から徒歩5分。散策にもおすすめ。</p>
+      <a href="access.html" class="btn">ガン見する</a>
+    </section>
+
+    <section id="contact">
+      <h2>お問い合わせ </h2>
+      <p>ご予約やご質問はお電話またはフォームから。</p>
+      <p>電話：09-9280-2611</p>
+      <a href="contact.html" class="btn">メールしちゃう？</a>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 KUZIRA CAFE</p>
+  </footer>
+
+<script>
+  const whale = document.querySelector('.whale-cursor');
+
+  document.addEventListener('mousemove', (e) => {
+    whale.style.left = e.clientX + 'px';
+    whale.style.top = e.clientY + 'px';
+  });
+</script>
+
+
+
+
+
+
+</body>
+</html>

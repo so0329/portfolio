@@ -1,0 +1,406 @@
+@charset "UTF-8";
+
+body {
+  background-color: #c3d8db;
+  margin: 0;
+  font-family: sans-serif;
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: white;       /* 背景を設定しないと下が透けます */
+  z-index: 1000;                  /* 前面に表示 */
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* 下にうっすら影 */
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.navbar ul {
+  display: flex;
+  list-style: none;
+  gap: 24px;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar li a {
+  position: relative;
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+.navbar li a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -2px;              /* アンダーラインの位置 */
+  width: 0%;
+  height: 2px;
+  background: #007bff;
+  transition: width 0.3s ease;
+}
+
+.navbar li a:hover {
+  color: #007bff;
+}
+
+.navbar li a:hover::after {
+  width: 100%;
+}
+
+.logo img {
+  height: 40px;   /* お好みで調整 */
+  width: auto;
+  display: block;
+}
+
+
+/* ヒーロー画像のレイアウト調整 */
+.hero {
+  position: relative;
+  width: 100%;
+  height: 500px;
+  overflow: hidden;
+}
+
+/* 背景画像 */
+.hero img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* テキストを中央に重ねる */
+.hero-text {
+  position: absolute;
+  bottom: 40px;
+  left: 40px;
+  transform: none;
+  color: white;
+  text-align: left;
+  font-size: 2.5rem;
+  font-weight: bold;
+  opacity: 0;
+  animation: fadeInUp 1.2s ease-out forwards;
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
+}
+
+
+/* アニメーション */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px); /* 中央からではないのでY方向だけ */
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.section {
+  padding: 80px 20px;
+}
+.section h2 {
+  text-align: center;     /* 中央寄せ */
+  font-family: 'Rock Salt', cursive;
+  font-size: 2.5rem;      /* 大きさを調整（例：2.5rem） */
+  margin-bottom: 20px;    /* 下の余白を追加（お好みで） */
+}
+
+.profile-box {
+  display: flex;
+  gap: 24px;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+.profile-images {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-left: 40px;
+}
+
+.profile-images img {
+  width: 600px;
+  height: auto;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+.profile-text {
+  max-width: 500px;
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 16px;
+  padding: 20px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.gallery a {
+  aspect-ratio: 1 / 1;
+  overflow: hidden;
+  display: block;
+  border-radius: 10px;
+}
+
+.gallery img {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+  transition: transform 0.3s ease, filter 0.3s ease;
+  border-radius: 10px;
+}
+
+
+.gallery img:hover {
+  transform: scale(1.05) rotate(-1deg);
+  filter: brightness(1.1) saturate(1.2); /* 明るく、色濃く */
+}
+
+
+
+.section img {
+  max-width: 600px;  /* 適宜サイズ調整（例：400px） */
+  width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  
+}
+
+.activity-images {
+  display: flex;
+  justify-content: center;    /* 中央寄せ */
+  gap: 16px;                  /* 画像の間隔 */
+  flex-wrap: wrap;            /* 小さい画面で折り返し可 */
+  margin-top: 20px;
+}
+
+.activity-images img {
+  width: 370px;               /* お好みの幅に調整可能 */
+  height: auto;
+  border-radius: 8px;
+}
+
+
+.marquee-section {
+  padding: 40px 0;
+}
+
+.marquee-box {
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 12px;
+  padding: 24px;
+  max-width: 1000px;
+  margin: 0 auto;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  overflow: hidden;  /* ← これが重要！ */
+}
+
+.marquee-box h3 {
+  text-align: center;
+  font-size: 1.5rem;
+  margin-bottom: 16px;
+  color: #333;
+}
+
+.marquee-track {
+  display: flex;
+  width: max-content;
+  gap: 0;
+  animation: marquee 20s linear infinite;
+}
+
+.marquee-track img {
+  width: 280px;
+  height: 380px;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+/* スライドアニメーション */
+@keyframes marquee {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+
+.activity-box {
+  background-color: #fff;
+  border: 1px solid #ccc;
+  padding: 24px;
+  border-radius: 12px;
+  max-width: 1000px;
+  margin: 0 auto;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05); 
+ 
+}
+
+.activity-box h3 {
+   text-align: center;
+  font-size: 1.5rem;
+  margin-bottom: 16px;
+  color: #333;
+}
+
+
+.cursor-dot {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 35px;
+  height: 35px;
+  background-color: rgba(0, 123, 255, 0.3); /* 青系の透明感 */
+  
+  border-radius: 50%;
+  pointer-events: none;  /* クリックに干渉させない */
+  transform: translate(-50%, -50%);
+  transition: transform 0.25s ease-out;
+  z-index: 10000;
+}
+
+.works-page img {
+  max-width: 100%;
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.works-page img:hover {
+  transform: scale(1.02);
+}
+
+.works-gallery {
+  display: flex;
+  flex-direction: column; /* ← 縦に並べる */
+  gap: 40px;               /* 各画像の間のスペース */
+  padding: 40px 20px;
+  max-width: 500px;        /* お好みで幅調整 */
+  margin: 0 auto;
+}
+
+.works-page img {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+  margin-bottom: 24px;
+}
+
+.works-page h1 {
+  font-family: 'Rock Salt',cursive;
+}
+
+.back-to-top {
+  position: fixed;
+  bottom: 5px;
+  right: 10px;
+  z-index: 999;
+}
+
+.back-to-top img {
+  width: 200px;
+  height: auto;
+  opacity: 0.7;
+  transition: opacity 0.3s ease;
+  background: none;       /* ← 念のため背景をなしに */
+  border: none;           /* ← 枠が出ないように */
+  box-shadow: none;       /* ← 影が出ていたら消す */
+}
+
+.back-to-top img:hover {
+  opacity: 1;
+}
+
+/* ===== スマホ画面向け（画面幅768px以下） ===== */
+@media screen and (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    gap: 12px;
+    padding: 10px;
+  }
+
+  .navbar ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .gallery {
+    grid-template-columns: repeat(2, 1fr); /* 6列→2列に */
+    gap: 12px;
+  }
+
+  .profile-box {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .profile-images {
+    margin-left: 0;
+    width: 100%;
+    align-items: center;
+  }
+
+  .profile-images img {
+    width: 90%;
+  }
+
+  .profile-text {
+    max-width: 90%;
+    text-align: center;
+  }
+
+  .activity-images img {
+    width: 90%;
+  }
+
+  .works-gallery {
+    padding: 20px 10px;
+    max-width: 100%;
+  }
+
+  .works-page img {
+    width: 90%;
+    margin: 0 auto 24px;
+  }
+
+  h1, h2 {
+    font-size: 1.8rem;
+  }
+
+  .back-to-top img {
+    width: 80px;
+  }
+}
+

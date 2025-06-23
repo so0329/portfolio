@@ -1,0 +1,239 @@
+
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Rock+Salt&display=swap" rel="stylesheet">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+
+    <title>KOJI HONDA Portfolio</title>
+</head>
+<body>
+ <header class="hero">
+  <img src="merikenthunder.jpg" alt="ヒーロー画像">
+  <div class="hero-text">
+    <h1>KH Portfolio</h1>
+  </div>
+</header>
+
+
+   <a href="#" class="back-to-top" title="ページ上部へ">
+  <img src="TOPp.png" alt="TOPへ戻る" />
+</a>
+
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  AOS.init({
+    duration: 1000, // アニメーション時間（ミリ秒）
+    once: true      // 一度だけ発動（true）か毎回発動（false）
+  });
+</script>
+
+<div class="cursor-dot"></div>
+
+<script>
+  const cursorDot = document.querySelector('.cursor-dot');
+
+  window.addEventListener('mousemove', (e) => {
+    cursorDot.style.transform = `translate(${e.clientX}px, ${e.clientY}px)`;
+  });
+</script>
+<script>
+  function playSound() {
+    const sound = document.getElementById("soundEffect");
+    sound.currentTime = 0;
+    sound.play();
+  }
+</script>
+
+<!-- audio要素（1つだけ！） -->
+<audio id="navSound" src="kami.mp3"></audio>
+<audio id="navClickSound" src="kettei2.mp3"></audio>
+
+<!-- JavaScript（navClickSoundの定義追加済み） -->
+<script>
+  window.addEventListener("DOMContentLoaded", () => {
+    const navSound = document.getElementById("navSound");
+    const navClickSound = document.getElementById("navClickSound");
+    const navLinks = document.querySelectorAll(".navbar li a");
+
+    navLinks.forEach(link => {
+      // ホバー時に音を鳴らす
+      link.addEventListener("mouseenter", () => {
+        navSound.currentTime = 0;
+        navSound.play();
+      });
+
+      // クリック時に音を鳴らす
+      link.addEventListener("click", () => {
+        navClickSound.currentTime = 0;
+        navClickSound.play();
+      });
+    });
+  });
+</script>
+
+
+
+
+</body>
+</html>
+<header class="header">
+  <nav class="navbar">
+    <div class="logo">
+  <a href="#" onmouseenter="playSound()">
+    <img src="tab.png" alt="Koji Honda ロゴ" class="sound-icon">
+  </a>
+  <audio id="soundEffect" src="boyo.mp3"></audio>
+</div>
+
+    <ul>
+      <li><a href="#profile">ABOUT</a></li>
+      <li><a href="#works">WORKS</a></li>
+      <li><a href="#ACTIVITY">ACTIVITY</a></li>
+      <li><a href="#websites">WEB DESIGN</a></li>
+      <li><a href="#LINE">LINE Stickers</a></li>
+    </ul>
+  </nav>
+</header>
+
+
+<main>
+<section id="profile" class="section" data-aos="fade-up">
+ <h2>ABOUT</h2>
+  <div class="profile-box">
+    <div class="profile-images" data-aos="zoom-in">
+
+      <img src="meriken.jpg" alt="about画像">
+      <img src="art.jpg" alt="about画像">
+    </div>
+    <div class="profile-text">
+      <p>にゃあ。</p>
+    </div>
+  </div>
+</section>
+
+
+  <section id="works" class="section">
+    <h2 data-aos="fade-down">WORKS</h2>
+
+    <div class="gallery">
+      <!-- サムネイル画像たち -->
+      <a href="works.html#img01" target="_blank"><img src="densor.jpg" alt="作品1"></a>
+      <a href="works.html#img02" target="_blank"><img src="denso1.jpg" alt="作品2"></a>
+       <a href="works.html#img03" target="_blank"><img src="densoyellow.png" alt="作品1"></a>
+      <a href="works.html#img04" target="_blank"><img src="denso0608_2.png" alt="作品2"></a>
+       <a href="works.html#img05" target="_blank"><img src="chaojiilogo.jpg" alt="作品1"></a>
+      <a href="works.html#img06" target="_blank"><img src="orange.jpg" alt="作品2"></a>
+       <a href="works.html#img07" target="_blank"><img src="chaoji.png" alt="作品1"></a>
+       <a href="works.html#img08" target="_blank"><img src="so.jpg" alt="作品1"></a>
+      <a href="works.html#img09" target="_blank"><img src="IMG_3391.jpg" alt="作品2"></a>
+       <a href="works.html#img10" target="_blank"><img src="asagayajazz.jpg" alt="作品1"></a>
+      <a href="works.html#img11" target="_blank"><img src="korea.png" alt="作品2"></a>
+       <a href="works.html#img12" target="_blank"><img src="IMG_4613.jpg" alt="作品1"></a>
+        <a href="works.html#img13" target="_blank"><img src="IMG_4614.jpg" alt="作品1"></a>
+         <a href="works.html#img14" target="_blank"><img src="IMG_4615.jpg" alt="作品1"></a>
+          <a href="works.html#img15" target="_blank"><img src="IMG_4616.jpg" alt="作品1"></a>
+           <a href="works.html#img16" target="_blank"><img src="IMG_4611.jpg" alt="作品1"></a>
+           <a href="works.html#img17" target="_blank"><img src="IMG_4612.jpg" alt="作品1"></a>
+       <a href="works.html#img18" target="_blank"><img src="nyanta.png" alt="作品1"></a>
+      <a href="works.html#img19" target="_blank"><img src="message.png" alt="作品2"></a>
+       <a href="works.html#img20" target="_blank"><img src="aura10.png" alt="作品1"></a>
+      <a href="works.html#img21" target="_blank"><img src="IMG_3389.jpg" alt="作品2"></a>
+       <a href="works.html#img22" target="_blank"><img src="IMG_3390.jpg" alt="作品1"></a>
+      <a href="works.html#img23" target="_blank"><img src="hokuhoku.jpg" alt="作品2"></a>
+       <a href="works.html#img24"target="_blank"><img src="aura1.png" alt="作品1"></a>
+      <a href="works.html#img25" target="_blank"><img src="aura5.png" alt="作品2"></a>
+       <a href="works.html#img26" target="_blank"><img src="aura8.png" alt="作品1"></a>
+      <a href="works.html#img27" target="_blank"><img src="IMG_3392.jpg" alt="作品2"></a>
+       <a href="works.html#img28" target="_blank"><img src="aura3.png" alt="作品1"></a>
+      <a href="works.html#img29" target="_blank"><img src="aura9.png" alt="作品2"></a>
+       <a href="works.html#img30" target="_blank"><img src="aura4.png" alt="作品1"></a>
+      <a href="works.html#img31" target="_blank"><img src="aura2.png" alt="作品2"></a>
+       <a href="works.html#img32" target="_blank"><img src="aura.png" alt="作品1"></a>
+      <a href="works.html#img33" target="_blank"><img src="aura7.png" alt="作品2"></a>
+       <a href="works.html#img34" target="_blank"><img src="aura6.png" alt="作品1"></a>
+      <a href="works.html#img35" target="_blank"><img src="tail.png" alt="作品2"></a>
+      <a href="works.html#img36" target="_blank"><img src="tailto.png" alt="作品2"></a>
+      <!-- ... -->
+    </div>
+  </section>
+
+
+<section id="ACTIVITY" class="section">
+  <h2>ACTIVITY</h2>
+ 
+  <!-- marquee を先に -->
+  <section class="marquee-section">
+     <div class="marquee-box">
+    <h3>LIVE活動</h3>
+    <div class="marquee-track">
+      <img src="A0172.jpg" alt="1">
+      <img src="A0232.jpg" alt="2">
+      <img src="9D5BEA0B-1936-4AE3-8440-6A7492527B1A_1_105_c.jpeg" alt="3">
+      <img src="7E2607E6-840D-4D82-8D96-958082CBA9D0_1_105_c.jpeg" alt="4">
+      <img src="B7B3CCAC-3D4F-46AB-97C2-B948A5594B88_1_105_c.jpeg" alt="5">
+       <img src="newyear.png" alt="6">
+        <img src="vegaa.png" alt="7">
+         <img src="vega.png" alt="8">
+          <img src="newyear.JPG" alt="9">
+         <img src="korea.JPG" alt="10">
+         
+
+         <img src="A0172.jpg" alt="1">
+      <img src="A0232.jpg" alt="2">
+      <img src="9D5BEA0B-1936-4AE3-8440-6A7492527B1A_1_105_c.jpeg" alt="3">
+      <img src="7E2607E6-840D-4D82-8D96-958082CBA9D0_1_105_c.jpeg" alt="4">
+      <img src="B7B3CCAC-3D4F-46AB-97C2-B948A5594B88_1_105_c.jpeg" alt="5">
+       <img src="newyear.png" alt="6">
+        <img src="vegaa.png" alt="7">
+         <img src="vega.png" alt="8">
+           <img src="newyear.JPG" alt="9">
+         <img src="korea.JPG" alt="10">
+          
+      
+    </div>
+  </section>
+
+ 
+  <!-- 追加：枠で囲むためのボックス -->
+  <div class="activity-box">
+    <h3>保育所での活動</h3>
+
+    <div class="activity-images">
+      <img src="20250129-1105_001.jpg" alt="保育所1"></a>
+      <img src="20250129-1105_001 2.jpg" alt="保育所2"></a>
+      <img src="20250129-1106_001.jpg" alt="保育所3"></a>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+
+
+  <section id="websites" class="section">
+    <h2>WEB DESIGN</h2>
+    <div class="web-gallery">
+      <p><a href="cafe/lp.html" target="_blank" rel="noopener"><img src="kuziralp.png" alt="LP"></a></p>
+      <p>
+      <a href="cafe/index.html" target="_blank"><img src="kuzira.png" alt="kuzira.png"></a></p>
+
+      <p><a href="CLOTHERA/index.html" target="_blank"><img src="chrothera.png" alt="chrothera.png"></a></p>
+
+      <p><a href="LPenpi/index.html" target="_blank"><img src="enpits.png" alt="enpits.png"></a></p>
+      <a href="Nekonyan/index.html" target="_blank"><img src="nyan.png" alt="nyan.png"></a>
+      <!-- ... -->
+    </div>
+  </section>
+
+  <section id="LINE" class="section">
+    <h2>LINE Stickers</h2>
+    <p><a href="https://line.me/S/sticker/30963901" target="_blank"><img src="line.jpg" alt="LP"></a></p>
+  </section>
+</main>

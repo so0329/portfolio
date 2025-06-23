@@ -1,107 +1,49 @@
-
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>KOJI HONDA Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
   <link href="https://fonts.googleapis.com/css2?family=Rock+Salt&display=swap" rel="stylesheet">
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-
-
-    <title>KOJI HONDA Portfolio</title>
 </head>
 <body>
- <header class="hero">
-  <img src="merikenthunder.jpg" alt="ヒーロー画像">
-  <div class="hero-text">
-    <h1>KH Portfolio</h1>
-  </div>
-</header>
+  <div class="cursor-dot"></div>
+  <header class="header">
+    <nav class="navbar">
+      <div class="logo">
+        <a href="#" onmouseenter="playSound()">
+          <img src="tab.png" alt="Koji Honda ロゴ" class="sound-icon" />
+        </a>
+        <audio id="soundEffect" src="boyo.mp3"></audio>
+      </div>
+      <div class="menu-toggle" id="menuToggle">
+        <span></span><span></span><span></span>
+      </div>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#profile">ABOUT</a></li>
+        <li><a href="#works">WORKS</a></li>
+        <li><a href="#ACTIVITY">ACTIVITY</a></li>
+        <li><a href="#websites">WEB DESIGN</a></li>
+        <li><a href="#LINE">LINE Stickers</a></li>
+        <li><a href="#contact">CONTACT</a></li>
+      </ul>
+    </nav>
+  </header>
 
+  <section class="hero">
+    <img src="merikenthunder.jpg" alt="ヒーロー画像" />
+    <div class="hero-text">
+      <h1>KH Portfolio</h1>
+    </div>
+  </section>
 
-   <a href="#" class="back-to-top" title="ページ上部へ">
-  <img src="TOPp.png" alt="TOPへ戻る" />
-</a>
-
-<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-<script>
-  AOS.init({
-    duration: 1000, // アニメーション時間（ミリ秒）
-    once: true      // 一度だけ発動（true）か毎回発動（false）
-  });
-</script>
-
-<div class="cursor-dot"></div>
-
-<script>
-  const cursorDot = document.querySelector('.cursor-dot');
-
-  window.addEventListener('mousemove', (e) => {
-    cursorDot.style.transform = `translate(${e.clientX}px, ${e.clientY}px)`;
-  });
-</script>
-<script>
-  function playSound() {
-    const sound = document.getElementById("soundEffect");
-    sound.currentTime = 0;
-    sound.play();
-  }
-</script>
-
-<!-- audio要素（1つだけ！） -->
-<audio id="navSound" src="kami.mp3"></audio>
-<audio id="navClickSound" src="kettei2.mp3"></audio>
-
-<!-- JavaScript（navClickSoundの定義追加済み） -->
-<script>
-  window.addEventListener("DOMContentLoaded", () => {
-    const navSound = document.getElementById("navSound");
-    const navClickSound = document.getElementById("navClickSound");
-    const navLinks = document.querySelectorAll(".navbar li a");
-
-    navLinks.forEach(link => {
-      // ホバー時に音を鳴らす
-      link.addEventListener("mouseenter", () => {
-        navSound.currentTime = 0;
-        navSound.play();
-      });
-
-      // クリック時に音を鳴らす
-      link.addEventListener("click", () => {
-        navClickSound.currentTime = 0;
-        navClickSound.play();
-      });
-    });
-  });
-</script>
-
-
-
-
-</body>
-</html>
-<header class="header">
-  <nav class="navbar">
-    <div class="logo">
-  <a href="#" onmouseenter="playSound()">
-    <img src="tab.png" alt="Koji Honda ロゴ" class="sound-icon">
+  <a href="#" class="back-to-top" title="ページ上部へ">
+    <img src="TOPp.png" alt="TOPへ戻る" />
   </a>
-  <audio id="soundEffect" src="boyo.mp3"></audio>
-</div>
 
-    <ul>
-      <li><a href="#profile">ABOUT</a></li>
-      <li><a href="#works">WORKS</a></li>
-      <li><a href="#ACTIVITY">ACTIVITY</a></li>
-      <li><a href="#websites">WEB DESIGN</a></li>
-      <li><a href="#LINE">LINE Stickers</a></li>
-    </ul>
-  </nav>
-</header>
-
-
-<main>
+  <main>
 <section id="profile" class="section" data-aos="fade-up">
  <h2>ABOUT</h2>
   <div class="profile-box">
@@ -111,7 +53,10 @@
       <img src="art.jpg" alt="about画像">
     </div>
     <div class="profile-text">
-      <p>にゃあ。</p>
+      <p>大分県佐伯市出身。
+東京で音楽活動やモデルなどの表現活動を経て、現在は神戸を拠点に制作・発信を続けています。</p>
+      <p>ROCKをルーツに持ち、ユニークかつ、どこかゆるくて記憶に残る表現を目指しています。</p>
+
     </div>
   </div>
 </section>
@@ -204,9 +149,9 @@
     <h3>保育所での活動</h3>
 
     <div class="activity-images">
-      <img src="20250129-1105_001.jpg" alt="保育所1"></a>
-      <img src="20250129-1105_001 2.jpg" alt="保育所2"></a>
-      <img src="20250129-1106_001.jpg" alt="保育所3"></a>
+      <img src="20250129-1105_001.jpg" alt="保育所1">
+      <img src="20250129-1105_001 2.jpg" alt="保育所2">
+      <img src="20250129-1106_001.jpg" alt="保育所3">
     </div>
   </div>
 </section>
@@ -236,4 +181,75 @@
     <h2>LINE Stickers</h2>
     <p><a href="https://line.me/S/sticker/30963901" target="_blank"><img src="line.jpg" alt="LP"></a></p>
   </section>
-</main>
+  
+ <section id="contact" class="section contact-section">
+  <h2>CONTACT</h2>
+  <div class="google-form-wrapper">
+    <iframe 
+      src="https://docs.google.com/forms/d/e/1FAIpQLSd2T9suQb6-jRvvtRl85fmy9AGoQ6FzQTXTY2tHjBheLCfGLg/viewform?embedded=true" 
+      width="100%" 
+      height="800" 
+      frameborder="0" 
+      marginheight="0" 
+      marginwidth="0"
+      loading="lazy">
+      読み込んでいます…
+    </iframe>
+  </div>
+</section>
+ </main>
+
+<footer class="footer">
+  <p>&copy; 2025 HONDA ROCKS. All rights reserved.</p>
+</footer>
+
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  AOS.init({ duration: 1000, once: true });
+</script>
+
+<script>
+  // カーソル用のDOMを1つだけ利用（重複削除済）
+  const cursorDot = document.querySelector('.cursor-dot');
+  window.addEventListener('mousemove', (e) => {
+    cursorDot.style.transform = `translate(${e.clientX}px, ${e.clientY}px)`;
+  });
+</script>
+
+<script>
+  function playSound() {
+    const sound = document.getElementById("soundEffect");
+    sound.currentTime = 0;
+    sound.play();
+  }
+</script>
+
+<audio id="navSound" src="kami.mp3"></audio>
+<audio id="navClickSound" src="kettei2.mp3"></audio>
+
+<script>
+  window.addEventListener("DOMContentLoaded", () => {
+    const navSound = document.getElementById("navSound");
+    const navClickSound = document.getElementById("navClickSound");
+    const navLinks = document.querySelectorAll(".navbar li a");
+    const menuToggle = document.getElementById("menuToggle");
+    const navMenu = document.getElementById("navLinks");
+
+    navLinks.forEach(link => {
+      link.addEventListener("mouseenter", () => {
+        navSound.currentTime = 0;
+        navSound.play();
+      });
+      link.addEventListener("click", () => {
+        navClickSound.currentTime = 0;
+        navClickSound.play();
+      });
+    });
+
+    menuToggle.addEventListener("click", () => {
+      navMenu.classList.toggle("open");
+    });
+  });
+</script>
+</body>
+</html>

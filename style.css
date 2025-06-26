@@ -26,11 +26,9 @@ body {
 }
 
 main {
-  margin-top: 80px; /* ヘッダーの高さに応じて調整 */
+  margin-top: 80px;
 }
 
-
-/* デフォルトでは非表示 */
 .menu-toggle {
   display: none;
   flex-direction: column;
@@ -92,6 +90,7 @@ main {
   width: 100%;
   height: 500px;
   overflow: hidden;
+  margin-top: 80px;
 }
 
 .hero img {
@@ -136,22 +135,22 @@ main {
 }
 
 .profile-box {
+  max-width: 1200px;
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: space-between;
   gap: 24px;
+  align-items: flex-start;
 }
 
 .profile-images {
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-  align-items: center;
+  flex: 1;
+  max-width: 1000px;
 }
 
 .profile-images img {
-  width: 600px;
-  max-width: 100%;
+  width: 100%;
+  max-width: 1000px;
   height: auto;
   border-radius: 8px;
   object-fit: cover;
@@ -162,15 +161,14 @@ main {
   max-width: 600px;
   font-size: 1.1rem;
   line-height: 1.6;
-  
+  flex: 2;
 }
 
 .gallery {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-  gap: 16px;
-  padding: 20px;
-  max-width: 1000px;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 10px;
+  max-width: 1200px;
   margin: 0 auto;
 }
 
@@ -179,17 +177,14 @@ main {
   aspect-ratio: 1 / 1;
   overflow: hidden;
   border-radius: 10px;
+  width: 100%;
 }
 
 .gallery img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  display: block;
-  transition: transform 0.3s ease, filter 0.3s ease;
-  border-radius: 10px;
 }
-
 
 .gallery img:hover {
   transform: scale(1.05);
@@ -296,10 +291,13 @@ main {
   opacity: 1;
 }
 
-/* スマホ用で表示させる */
 @media screen and (max-width: 768px) {
   .menu-toggle {
     display: flex;
+  }
+
+  .gallery {
+    grid-template-columns: repeat(2, 1fr);
   }
 
   .navbar ul {
@@ -311,7 +309,6 @@ main {
   .navbar ul.open {
     display: flex !important;
   }
-}
 
   .hero {
     height: 300px;
@@ -325,11 +322,6 @@ main {
 
   .section h2 {
     font-size: 1.8rem;
-  }
-
-  .gallery {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 12px;
   }
 
   .profile-images img,
@@ -349,20 +341,33 @@ main {
     width: 90%;
   }
 
+  .works-gallery {
+    padding: 20px 10px;
+    max-width: 60%;
+  }
+
+  .works-gallery img {
+    width: 90%;
+  }
+
+  .gallery {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
 
 .works-gallery {
   display: flex;
-  flex-direction: column;     /* 縦並びにする */
-  align-items: center;        /* 中央寄せ */
-  gap: 40px;                  /* 各画像の間隔 */
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
   padding: 40px 20px;
-  max-width: 600px;           /* 幅を適度に制限 */
+  max-width: 600px;
   margin: 0 auto;
 }
 
 .works-gallery img {
-  width: 60%;                /* 幅いっぱいに広げる */
-  height: auto;               /* 高さは自動 */
+  width: 60%;
+  height: auto;
   border-radius: 12px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease;
@@ -372,25 +377,12 @@ main {
   transform: scale(1.02);
 }
 
-
-@media screen and (max-width: 768px) {
-  .works-gallery {
-    padding: 20px 10px;
-    max-width: 60%;
-  }
-
-  .works-gallery img {
-    width: 90%;
-  }
-}
-
-
 .footer {
-  text-align: center;      /* 中央寄せ */
-  padding: 20px;           /* 上下の余白を追加（お好み） */
-  background-color: #fff;  /* 必要なら背景色 */
-  font-size: 0.9rem;        /* 少し小さめの文字サイズにする場合 */
-  color: #333;             /* 文字色もお好みで */
+  text-align: center;
+  padding: 20px;
+  background-color: #fff;
+  font-size: 0.9rem;
+  color: #333;
 }
 
 @media screen and (max-width: 768px) {
@@ -399,12 +391,11 @@ main {
   }
 }
 
-
 .cursor-dot {
   position: fixed;
   width: 20px;
   height: 20px;
-  background: rgba(100, 149, 237, 0.9); 
+  background: rgba(100, 149, 237, 0.9);
   border-radius: 50%;
   pointer-events: none;
   transform: translate(-50%, -50%);

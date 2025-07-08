@@ -11,6 +11,15 @@
 
 </head>
 <body>
+ <div id="loader">
+  <div class="loading-count">0%</div>
+</div>
+
+
+   <video autoplay muted loop playsinline id="bg-video">
+  <source src="portforio.mp4" type="video/mp4">
+  お使いのブラウザは動画タグをサポートしていません。
+</video>
   <div class="cursor-dot"></div>
   <header class="header">
     <nav class="navbar">
@@ -37,7 +46,7 @@
   <section class="hero">
     <img src="merikenthunder.jpg" alt="ヒーロー画像" />
     <div class="hero-text">
-      <h1>KH Portfolio</h1>
+      <h1>My SHOWCASE</h1>
     </div>
   </section>
 
@@ -54,12 +63,14 @@
       <img src="meriken.jpg" alt="about画像">
       <img src="art.jpg" alt="about画像">
     </div>
-    <div class="profile-text">
-      <p>大分県佐伯市出身。
-東京で音楽活動やモデルなどの表現活動を経て、現在は神戸を拠点に制作・発信を続けています。</p>
-      <p>ROCKをルーツに持ち、ユニークかつ、どこかゆるくて記憶に残る表現を目指しています。</p>
+<div class="profile-text profile-boxed">
+  <p class="text-animate">大分県佐伯市出身。東京で音楽活動やモデルなどの表現活動を経て、現在は神戸を拠点に制作・発信を続けています。</p>
+  <p class="text-animate" style="animation-delay: 3s;">ROCKをルーツに持ち、ユニークかつ、どこかゆるくて記憶に残る表現を目指しています。</p>
+</div>
 
-    </div>
+
+
+
   </div>
 </section>
 
@@ -82,7 +93,8 @@
       <a href="works.html#img11" target="_blank"><img src="korea.png" alt="作品2"></a>
        <a href="works.html#img12" target="_blank"><img src="IMG_4613.jpg" alt="作品1"></a>
         <a href="works.html#img13" target="_blank"><img src="IMG_4614.jpg" alt="作品1"></a>
-         <a href="works.html#img14" target="_blank"><img src="IMG_4615.jpg" alt="作品1"></a>
+         <a href="works.html#img14" target="_blank"><img src="coolheart.png" alt="作品1"></a>
+     
           <a href="works.html#img15" target="_blank"><img src="IMG_4616.jpg" alt="作品1"></a>
            <a href="works.html#img16" target="_blank"><img src="IMG_4611.jpg" alt="作品1"></a>
            <a href="works.html#img17" target="_blank"><img src="IMG_4612.jpg" alt="作品1"></a>
@@ -186,6 +198,19 @@
     <p><a href="https://line.me/S/sticker/30963901" target="_blank"><img src="line.jpg" alt="LP"></a></p>
   </section>
   
+<section class="section chaoji-stamps">
+
+  <div class="chaoji-gallery">
+    <img src="chaoji1.jpg" alt="chaoji1">
+    <img src="chaoji2.jpg" alt="chaoji2">
+    <img src="chaoji3.jpg" alt="chaoji3">
+    <img src="chaoji4.jpg" alt="chaoji4">
+    <img src="chaoji.jpg" alt="chaoji5">
+  </div>
+</section>
+
+
+
  <section id="contact" class="section contact-section">
   <h2>CONTACT</h2>
   <div class="google-form-wrapper">
@@ -207,32 +232,38 @@
   <p>&copy; 2025 HONDA ROCKS. All rights reserved.</p>
 </footer>
 
+<!-- AOS本体を読み込む（←これは必要！） -->
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+<!-- 自分で書くAOS初期化 & JS処理（カーソル・音・アニメなど） -->
 <script>
   AOS.init({ duration: 1000, once: true });
-</script>
 
-<script>
-  // カーソル用のDOMを1つだけ利用（重複削除済）
+ document.addEventListener("DOMContentLoaded", () => {
   const cursorDot = document.querySelector('.cursor-dot');
+
+  let mouseX = 0;
+  let mouseY = 0;
+  let currentX = 0;
+  let currentY = 0;
+  const delay = 0.1; // ← 遅延の大きさ（0.05〜0.15で調整）
+
   window.addEventListener('mousemove', (e) => {
-    cursorDot.style.transform = `translate(${e.clientX}px, ${e.clientY}px)`;
+    mouseX = e.clientX;
+    mouseY = e.clientY;
   });
-</script>
 
-<script>
-  function playSound() {
-    const sound = document.getElementById("soundEffect");
-    sound.currentTime = 0;
-    sound.play();
-  }
-</script>
+function animateCursor() {
+  currentX += (mouseX - currentX) * delay;
+  currentY += (mouseY - currentY) * delay;
+  cursorDot.style.transform = `translate(${currentX}px, ${currentY}px) translate(-50%, -50%)`;
+  requestAnimationFrame(animateCursor);
+}
 
-<audio id="navSound" src="kami.mp3"></audio>
-<audio id="navClickSound" src="kettei2.mp3"></audio>
 
-<script>
-  window.addEventListener("DOMContentLoaded", () => {
+  animateCursor();
+
+
     const navSound = document.getElementById("navSound");
     const navClickSound = document.getElementById("navClickSound");
     const navLinks = document.querySelectorAll(".navbar li a");
@@ -253,7 +284,46 @@
     menuToggle.addEventListener("click", () => {
       navMenu.classList.toggle("open");
     });
+
+    const texts = document.querySelectorAll(".text-animate");
+    let cumulativeDelay = 0;
+
+    texts.forEach((el) => {
+      const text = el.textContent;
+      el.textContent = "";
+      [...text].forEach((char, i) => {
+        const span = document.createElement("span");
+        span.textContent = char;
+        span.style.animationDelay = `${cumulativeDelay + i * 0.05}s`;
+        el.appendChild(span);
+      });
+      cumulativeDelay += text.length * 0.08;
+    });
+  });
+
+  function playSound() {
+    const sound = document.getElementById("soundEffect");
+    sound.currentTime = 0;
+    sound.play();
+  }
+</script>
+<script>
+  window.addEventListener("DOMContentLoaded", () => {
+    const countElement = document.querySelector(".loading-count");
+    let count = 0;
+
+    const interval = setInterval(() => {
+      count++;
+      countElement.textContent = count + "%";
+
+      if (count >= 100) {
+        clearInterval(interval);
+        document.body.classList.add("loaded");
+      }
+    }, 50); // 数字の増え方の速度（20ミリ秒ごとに+1）
   });
 </script>
+
+
 </body>
 </html>

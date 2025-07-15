@@ -57,9 +57,17 @@ main {
 .navbar li a {
   position: relative;
   text-decoration: none;
-  color: #333;
-  font-weight: bold;
-  transition: color 0.3s;
+  color: #cc00ff; /* ← 紫がかったインパクトカラー */
+  font-weight: normal;
+  font-family: 'Creepster', cursive;
+  font-size: 2rem; /* ← 少し大きめ（お好みで調整OK） */
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+  text-shadow:
+    0 0 2px #ff00ff,
+    0 0 4px #ff00ff,
+    0 0 4px #00bfff,
+    0 0 6px #00bfff;
 }
 
 .navbar li a::after {
@@ -74,11 +82,40 @@ main {
 }
 
 .navbar li a:hover {
-  color: #007bff;
+  color: #40e0d0; /* ティファニーブルー系 */
+  text-shadow:
+    0 0 2px #40e0d0,
+    0 0 4px #5ffbf1,
+    0 0 6px #a0ffff,
+    0 0 8px #e0ffff;
+}
+
+
+
+.navbar li a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 0%;
+  height: 2px;
+  background: #ff0099; /* アンダーラインの色も合わせる */
+  transition: width 0.3s ease;
 }
 
 .navbar li a:hover::after {
   width: 100%;
+}
+
+.hero-text h1 {
+  font-family: 'Creepster', cursive;
+  font-size: 8rem; /* サイズは調整可能 */
+  color: #cc00ff;
+  opacity: 0.85; /* 少し透明感 */
+text-shadow:
+  0 0 4px #ff00ff,
+  0 0 10px #00ffff,
+  0 0 16px #ff00ff;
 }
 
 .logo img {

@@ -109,7 +109,7 @@ main {
 
 .hero-text h1 {
   font-family: 'Creepster', cursive;
-  font-size: 8rem; /* サイズは調整可能 */
+  font-size: 4rem; /* サイズは調整可能 */
   color: #cc00ff;
   opacity: 0.85; /* 少し透明感 */
 text-shadow:
